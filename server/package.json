@@ -26,6 +26,7 @@
   "scripts": {
     "build": "tsc",
     "01": "tsx src/01-process-object.ts",
+    "02":"tsx src/02-crypto-module.ts",
     "start": "node --watch index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
