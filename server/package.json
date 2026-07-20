@@ -1,0 +1,37 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server",
+  "keywords": [
+    "JOb",
+    "portal",
+    "Jobs",
+    "finding",
+    "AI",
+    "resume",
+    "AI"
+  ],
+  "homepage": "https://github.com/kiran0421/job-portal#readme",
+  "bugs": {
+    "url": "https://github.com/kiran0421/job-portal/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiran0421/job-portal.git"
+  },
+  "license": "ISC",
+  "author": "Kiran",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "01": "tsx src/01-process-object.ts",
+    "start": "node --watch index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
+  }
+}
