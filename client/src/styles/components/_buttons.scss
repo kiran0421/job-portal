@@ -1,0 +1,49 @@
+@use '../variables' as *;
+
+@mixin btn($background, $color, $background-hover) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.975rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    background: $background;
+    color: $color-text;
+    &:hover {
+        transform: translateY(-1px);
+    }
+    &:active {
+        transform: scale(0.98);
+    }
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+    background: $background;
+    color: $color;
+    &:hover {
+    background: $background-hover;
+    }
+}
+
+.btn { @include btn($background,$color-text, $color-focus)}
+.btn-primary { @include btn($primary,$white, $primary-dark) }
+.btn-secondary { @include btn($secondary,$white, $secondary-dark) }
+.btn-success { @include btn($success,$white, $success-dark) }
+.btn-danger { @include btn($danger,$white, $danger-dark) }
+.btn-warning { @include btn($warning,$white, $warning-dark) }
+.btn-info { @include btn($info,$white, $info-dark) }
+
+.btn-sm {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.75rem !important;
+}
+.btn-lg {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 1rem !important;
+}

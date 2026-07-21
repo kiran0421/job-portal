@@ -1,0 +1,23 @@
+@use 'variables' as *;
+@mixin xs { @media (min-width: #{ $breakpoint-xs }) and (max-width: #{ $breakpoint-sm - 1 }) { @content; } }
+@mixin sm { @media (min-width: #{ $breakpoint-sm }) and (max-width: #{ $breakpoint-md - 1 }) { @content; } }
+@mixin md { @media (min-width: #{ $breakpoint-md }) and (max-width: #{ $breakpoint-lg - 1 }) { @content; } }
+@mixin lg { @media (min-width: #{ $breakpoint-lg }) and (max-width: #{ $breakpoint-xl - 1 }) { @content; } }
+@mixin xl { @media (min-width: #{ $breakpoint-xl }) { @content; } }
+
+@include xs {
+    .abc {
+        background: red;
+    }
+    
+}
+
+.dcdd {
+    color: #000;
+    @include xs {
+        background-color: blue;
+    }
+    @include sm {
+        background-color: yellow;
+    }
+}

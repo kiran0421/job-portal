@@ -1,0 +1,234 @@
+@use 'variables' as *;
+@use 'breakpoints' as *;
+// Paddings
+@each $name, $value in $spacings { .p-#{$name} { padding: #{$value}; } }
+@include xl { @each $name, $value in $spacings { .p-xl-#{$name} { padding: #{$value}; } } }
+@include lg { @each $name, $value in $spacings { .p-lg-#{$name} { padding: #{$value}; } } }
+@include md { @each $name, $value in $spacings { .p-md-#{$name} { padding: #{$value}; } } }
+@include sm { @each $name, $value in $spacings { .p-sm-#{$name} { padding: #{$value}; } } }
+@include xs { @each $name, $value in $spacings { .p-xs-#{$name} { padding: #{$value}; } } }
+
+// Padding Top
+@each $name, $value in $spacings { .pt-#{$name} { padding-top: #{$value}; } }
+@include xl { @each $name, $value in $spacings { .pt-xl-#{$name} { padding-top: #{$value}; } } }
+@include lg { @each $name, $value in $spacings { .pt-lg-#{$name} { padding-top: #{$value}; } } }
+@include md { @each $name, $value in $spacings { .pt-md-#{$name} { padding-top: #{$value}; } } }
+@include sm { @each $name, $value in $spacings { .pt-sm-#{$name} { padding-top: #{$value}; } } }
+@include xs { @each $name, $value in $spacings { .pt-xs-#{$name} { padding-top: #{$value}; } } }
+
+// Padding Bottom
+@each $name, $value in $spacings { .pb-#{$name} { padding-bottom: #{$value}; } }
+@include xl { @each $name, $value in $spacings { .pb-xl-#{$name} { padding-bottom: #{$value}; } } }
+@include lg { @each $name, $value in $spacings { .pb-lg-#{$name} { padding-bottom: #{$value}; } } }
+@include md { @each $name, $value in $spacings { .pb-md-#{$name} { padding-bottom: #{$value}; } } }
+@include sm { @each $name, $value in $spacings { .pb-sm-#{$name} { padding-bottom: #{$value}; } } }
+@include xs { @each $name, $value in $spacings { .pb-xs-#{$name} { padding-bottom: #{$value}; } } }
+
+// Padding Left
+@each $name, $value in $spacings { .ps-#{$name} { padding-left: #{$value}; } }
+@include xl { @each $name, $value in $spacings { .ps-xl-#{$name} { padding-left: #{$value}; } } }
+@include lg { @each $name, $value in $spacings { .ps-lg-#{$name} { padding-left: #{$value}; } } }
+@include md { @each $name, $value in $spacings { .ps-md-#{$name} { padding-left: #{$value}; } } }
+@include sm { @each $name, $value in $spacings { .ps-sm-#{$name} { padding-left: #{$value}; } } }
+@include xs { @each $name, $value in $spacings { .ps-xs-#{$name} { padding-left: #{$value}; } } }
+
+// Padding Right
+@each $name, $value in $spacings { .pe-#{$name} { padding-right: #{$value}; } }
+@include xl { @each $name, $value in $spacings { .pe-xl-#{$name} { padding-right: #{$value}; } } }
+@include lg { @each $name, $value in $spacings { .pe-lg-#{$name} { padding-right: #{$value}; } } }
+@include md { @each $name, $value in $spacings { .pe-md-#{$name} { padding-right: #{$value}; } } }
+@include sm { @each $name, $value in $spacings { .pe-sm-#{$name} { padding-right: #{$value}; } } }
+@include xs { @each $name, $value in $spacings { .pe-xs-#{$name} { padding-right: #{$value}; } } }
+
+
+// Padding X axis
+@each $name, $value in $spacings { .px-#{$name} { padding-left: #{$value}; padding-right: #{$value}; } }
+@include xl { @each $name, $value in $spacings { .px-xl-#{$name} { padding-left: #{$value}; padding-right: #{$value}; } } }
+@include lg { @each $name, $value in $spacings { .px-lg-#{$name} { padding-left: #{$value}; padding-right: #{$value}; } } }
+@include md { @each $name, $value in $spacings { .px-md-#{$name} { padding-left: #{$value}; padding-right: #{$value}; } } }
+@include sm { @each $name, $value in $spacings { .px-sm-#{$name} { padding-left: #{$value}; padding-right: #{$value}; } } }
+@include xs { @each $name, $value in $spacings { .px-xs-#{$name} { padding-left: #{$value}; padding-right: #{$value}; } } }
+
+// Padding Y - axis
+@each $name, $value in $spacings { .py-#{$name} { padding-top: #{$value}; padding-bottom: #{$value};} }
+@include xl { @each $name, $value in $spacings { .py-xl-#{$name} { padding-top: #{$value}; padding-bottom: #{$value}; } } }
+@include lg { @each $name, $value in $spacings { .py-lg-#{$name} { padding-top: #{$value}; padding-bottom: #{$value}; } } }
+@include md { @each $name, $value in $spacings { .py-md-#{$name} { padding-top: #{$value}; padding-bottom: #{$value}; } } }
+@include sm { @each $name, $value in $spacings { .py-sm-#{$name} { padding-top: #{$value}; padding-bottom: #{$value}; } } }
+@include xs { @each $name, $value in $spacings { .py-xs-#{$name} { padding-top: #{$value}; padding-bottom: #{$value}; } } }
+
+
+// Margin
+@each $name, $value in $spacings { .m-#{$name} { margin: #{$value}; } }
+@include xl { @each $name, $value in $spacings { .m-xl-#{$name} { margin: #{$value}; } } }
+@include lg { @each $name, $value in $spacings { .m-lg-#{$name} { margin: #{$value}; } } }
+@include md { @each $name, $value in $spacings { .m-md-#{$name} { margin: #{$value}; } } }
+@include sm { @each $name, $value in $spacings { .m-sm-#{$name} { margin: #{$value}; } } }
+@include xs { @each $name, $value in $spacings { .m-xs-#{$name} { margin: #{$value}; } } }
+
+// Margin Top
+@each $name, $value in $spacings { .mt-#{$name} { margin-top: #{$value}; } }
+@include xl { @each $name, $value in $spacings { .mt-xl-#{$name} { margin-top: #{$value}; } } }
+@include lg { @each $name, $value in $spacings { .mt-lg-#{$name} { margin-top: #{$value}; } } }
+@include md { @each $name, $value in $spacings { .mt-md-#{$name} { margin-top: #{$value}; } } }
+@include sm { @each $name, $value in $spacings { .mt-sm-#{$name} { margin-top: #{$value}; } } }
+@include xs { @each $name, $value in $spacings { .mt-xs-#{$name} { margin-top: #{$value}; } } }
+
+// Margin Bottom
+@each $name, $value in $spacings { .mb-#{$name} { margin-bottom: #{$value}; } }
+@include xl { @each $name, $value in $spacings { .mb-xl-#{$name} { margin-bottom: #{$value}; } } }
+@include lg { @each $name, $value in $spacings { .mb-lg-#{$name} { margin-bottom: #{$value}; } } }
+@include md { @each $name, $value in $spacings { .mb-md-#{$name} { margin-bottom: #{$value}; } } }
+@include sm { @each $name, $value in $spacings { .mb-sm-#{$name} { margin-bottom: #{$value}; } } }
+@include xs { @each $name, $value in $spacings { .mb-xs-#{$name} { margin-bottom: #{$value}; } } }
+
+// Margin Left
+@each $name, $value in $spacings { .ms-#{$name} { margin-left: #{$value}; } }
+@include xl { @each $name, $value in $spacings { .ms-xl-#{$name} { margin-left: #{$value}; } } }
+@include lg { @each $name, $value in $spacings { .ms-lg-#{$name} { margin-left: #{$value}; } } }
+@include md { @each $name, $value in $spacings { .ms-md-#{$name} { margin-left: #{$value}; } } }
+@include sm { @each $name, $value in $spacings { .ms-sm-#{$name} { margin-left: #{$value}; } } }
+@include xs { @each $name, $value in $spacings { .ms-xs-#{$name} { margin-left: #{$value}; } } }
+
+// Margin Right
+@each $name, $value in $spacings { .me-#{$name} { margin-right: #{$value}; } }
+@include xl { @each $name, $value in $spacings { .me-xl-#{$name} { margin-right: #{$value}; } } }
+@include lg { @each $name, $value in $spacings { .me-lg-#{$name} { margin-right: #{$value}; } } }
+@include md { @each $name, $value in $spacings { .me-md-#{$name} { margin-right: #{$value}; } } }
+@include sm { @each $name, $value in $spacings { .me-sm-#{$name} { margin-right: #{$value}; } } }
+@include xs { @each $name, $value in $spacings { .me-xs-#{$name} { margin-right: #{$value}; } } }
+
+// Margin X axis
+@each $name, $value in $spacings { .mx-#{$name} { margin-left: #{$value}; margin-right: #{$value}; } }
+@include xl { @each $name, $value in $spacings { .mx-xl-#{$name} { margin-left: #{$value}; margin-right: #{$value}; } } }
+@include lg { @each $name, $value in $spacings { .mx-lg-#{$name} { margin-left: #{$value}; margin-right: #{$value}; } } }
+@include md { @each $name, $value in $spacings { .mx-md-#{$name} { margin-left: #{$value}; margin-right: #{$value}; } } }
+@include sm { @each $name, $value in $spacings { .mx-sm-#{$name} { margin-left: #{$value}; margin-right: #{$value}; } } }
+@include xs { @each $name, $value in $spacings { .mx-xs-#{$name} { margin-left: #{$value}; margin-right: #{$value}; } } }
+
+// Margin Y - axis
+@each $name, $value in $spacings { .my-#{$name} { margin-top: #{$value}; margin-bottom: #{$value};} }
+@include xl { @each $name, $value in $spacings { .my-xl-#{$name} { margin-top: #{$value}; margin-bottom: #{$value}; } } }
+@include lg { @each $name, $value in $spacings { .my-lg-#{$name} { margin-top: #{$value}; margin-bottom: #{$value}; } } }
+@include md { @each $name, $value in $spacings { .my-md-#{$name} { margin-top: #{$value}; margin-bottom: #{$value}; } } }
+@include sm { @each $name, $value in $spacings { .my-sm-#{$name} { margin-top: #{$value}; margin-bottom: #{$value}; } } }
+@include xs { @each $name, $value in $spacings { .my-xs-#{$name} { margin-top: #{$value}; margin-bottom: #{$value}; } } }
+
+.m-auto { margin-left: auto; margin-right: auto; }
+.ms-auto { margin-left: auto; }
+.me-auto { margin-right: auto; }
+
+.h-screen { height: 100dvh; }
+.h-100 { height: 100%; }
+
+.w-screen { width: 100dvw; }
+.w-100 { width: 100%; }
+.w-fit { width: fit-content; }
+
+.d-none { display: none; }
+@include xl { .d-xl-none {display: none;} }
+@include lg { .d-lg-none {display: none;} }
+@include md { .d-md-none {display: none;} }
+@include sm { .d-sm-none {display: none;} }
+@include xs { .d-xs-none {display: none;} }
+
+// Font sizes
+@each $name, $value in $font-sizes { .fs-#{$name} { font-size: #{$value}; } }
+@include xl { @each $name, $value in $font-sizes { .fs-xl-#{$name} { font-size: #{$value};}}}
+@include lg { @each $name, $value in $font-sizes { .fs-lg-#{$name} { font-size: #{$value};}}}
+@include md { @each $name, $value in $font-sizes { .fs-md-#{$name} { font-size: #{$value};}}}
+@include sm { @each $name, $value in $font-sizes { .fs-sm-#{$name} { font-size: #{$value};}}}
+@include xs { @each $name, $value in $font-sizes { .fs-xs-#{$name} { font-size: #{$value};}}}
+
+// h1, h2, h3, h4, h5, h6
+@each $name, $properties in $headings { .#{$name} { font-size: map-get($properties, size); font-weight: map-get($properties, weight); line-height: map-get($properties, line-height);}}
+@include xl { @each $name, $properties in $headings { .#{$name}-xl { font-size: map-get($properties, size); font-weight: map-get($properties, weight); line-height: map-get($properties, line-height); } }}
+@include lg { @each $name, $properties in $headings { .#{$name}-lg { font-size: map-get($properties, size); font-weight: map-get($properties, weight); line-height: map-get($properties, line-height); } }}
+@include md { @each $name, $properties in $headings { .#{$name}-md { font-size: map-get($properties, size); font-weight: map-get($properties, weight); line-height: map-get($properties, line-height); } }}
+@include sm { @each $name, $properties in $headings { .#{$name}-sm { font-size: map-get($properties, size); font-weight: map-get($properties, weight); line-height: map-get($properties, line-height); } }}
+@include xs { @each $name, $properties in $headings { .#{$name}-xs { font-size: map-get($properties, size); font-weight: map-get($properties, weight); line-height: map-get($properties, line-height); } }}
+
+// font weight
+@each $name, $value in $font-weights { .f-#{$name} { font-weight: #{$value};}}
+@include xl { @each $name, $value in $font-weights { .f-xl-#{$name} { font-weight: #{$value};}}}
+@include lg { @each $name, $value in $font-weights { .f-lg-#{$name} { font-weight: #{$value};}}}
+@include md { @each $name, $value in $font-weights { .f-md-#{$name} { font-weight: #{$value};}}}
+@include sm { @each $name, $value in $font-weights { .f-sm-#{$name} { font-weight: #{$value};}}}
+@include xs { @each $name, $value in $font-weights { .f-xs-#{$name} { font-weight: #{$value};}}}
+.bold {font-weight: bold;}
+.bolder {font-weight: bolder;}
+
+.text-start { text-align: left; }
+.text-center { text-align: center; }
+.text-end { text-align: right; }
+.text-justify { text-align: justify; }
+.text-none { text-decoration: none; color: inherit;}
+
+.debug{border: solid red 1px;}
+.rounded-sm { border-radius: $radius-sm; }
+.rounded-md { border-radius: $radius-md; }
+.rounded-lg { border-radius: $radius-md; }
+.rounded-full { border-radius: 50%; }
+.rounded-0 { border-radius: 0px; }
+.rounded-1 { border-radius: 4px; }
+.rounded-2 { border-radius: 8px; }
+.rounded-3 { border-radius: 12px; }
+.rounded-4 { border-radius: 16px; }
+.rounded-5 { border-radius: 20px; }
+.rounded-6 { border-radius: 24px; }
+.rounded-7 { border-radius: 32px; }
+.pointer { cursor: pointer; }
+.default { cursor: default; }
+
+.overflow-hidden { overflow: hidden; }
+.overflow-auto { overflow: auto; }
+.overflow-scroll { overflow: scroll; }
+.overflow-y-auto { overflow-y: auto; overflow-x: hidden; }
+
+.border-none { border: none; }
+.outline-none { outline: none }
+.border { border: 1px solid $border; }
+.border-top { border-top: 1px solid $border; }
+.border-start { border-left: 1px solid $border; }
+.border-end { border-right: 1px solid $border; }
+.border-bottom { border-bottom: 1px solid $border; }
+.divider { background-color: $border; height: 1px;}
+
+.text-heading { color: $color-heading; font-weight: bold;}
+.text-default { color: $color-text; }
+.text-light { color: $color-text-light; }
+.text-muted { color: $color-muted; }
+.text-white { color: $white; }
+.text-black { color: $black; }
+
+.text-primary { color: $primary; }
+.text-secondary { color: $secondary; }
+.text-success { color: $success; }
+.text-danger { color: $danger; }
+.text-warning { color: $warning; }
+.text-info { color: $info; }
+
+.bg { background-color: $background; }
+.bg-primary { background-color: $primary; }
+.bg-secondary { background-color: $secondary; }
+.bg-success { background-color: $success; }
+.bg-danger { background-color: $danger; }
+.bg-warning { background-color: $warning; }
+.bg-info { background-color: $info; }
+.bg-white { background-color: $white; }
+.bg-black { background-color: $black; }
+
+.bg-info-lighter { background-color: $info-lighter; }
+.bg-primary-lighter { background-color: $primary-lighter; }
+.bg-secondary-lighter { background-color: $secondary-lighter; }
+.bg-success-lighter { background-color: $success-lighter; }
+.bg-warning-lighter { background-color: $warning-lighter; }
+.bg-danger-lighter { background-color: $danger-lighter; }
+
+.bg-info-light { background-color: $info-light; }
+.bg-primary-light { background-color: $primary-light; }
+.bg-secondary-light { background-color: $secondary-light; }
+.bg-success-light { background-color: $success-light; }
+.bg-warning-light { background-color: $warning-light; }
+.bg-danger-light { background-color: $danger-light; }
+.relative { position: relative;}

@@ -1,0 +1,92 @@
+@use "../../styles/variables" as *;
+
+.registration-form-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: map-get($spacings, 8);
+  min-height: 100vh;
+  background: $background;
+}
+
+.registration-card {
+  width: 100%;
+  max-width: 400px;
+  padding: map-get($spacings, 6);
+  background: $white;
+  border-radius: $radius-md;
+  box-shadow: 0 2px 8px $shadow;
+}
+
+.form-group {
+  margin-bottom: map-get($spacings, 5);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: map-get($spacings, 2);
+  color: $color-heading;
+  font-weight: map-get($font-weights, 600);
+}
+
+.required-mark {
+  color: $danger;
+}
+
+.form-control {
+  width: 100%;
+  padding: map-get($spacings, 3);
+  border: 1px solid $border;
+  border-radius: $radius-sm;
+}
+
+.form-control-error {
+  border-color: $danger;
+}
+
+.form-error {
+  color: $danger;
+  font-size: map-get($font-sizes, 2);
+  margin-top: map-get($spacings, 1);
+}
+
+.registration-success {
+  background: $success-lighter;
+  color: $success-dark;
+  border: 1px solid $success-border;
+  padding: map-get($spacings, 3);
+  border-radius: $radius-sm;
+  margin-bottom: map-get($spacings, 5);
+}
+
+.registration-actions {
+  display: flex;
+  gap: map-get($spacings, 3);
+  margin-top: map-get($spacings, 6);
+}
+
+.btn {
+  flex: 1;
+  padding: map-get($spacings, 3);
+  border: none;
+  border-radius: $radius-sm;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: $info-border-dark;
+  color:  $color-heading;
+;
+}
+
+.btn-primary:hover {
+  background: $info-border;
+}
+
+.btn:not(.btn-primary) {
+  background: $info-border-dark;
+  color: $color-heading;
+}
+
+.btn:not(.btn-primary):hover {
+  background: $info-border;
+}

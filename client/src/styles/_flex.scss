@@ -1,0 +1,125 @@
+@use 'breakpoints' as * ;
+@use 'variables' as * ;
+.row {
+    display: flex; 
+    flex-wrap: wrap;
+    --gap:0rem;
+    gap: var(--gap);
+}
+.column {
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: column;
+    --gap:0rem;
+    gap: var(--gap);
+}
+
+@for $i from 1 through 12 { 
+    $width : calc((100% - (11 * var(--gap))) / 12 * #{$i} + (#{$i} - 1) * var(--gap));
+    .col-#{$i} { flex: 0 0 $width; max-width: $width;}
+}
+
+@include xl {
+    @for $i from 1 through 12 { 
+        $width : calc((100% - (11 * var(--gap))) / 12 * #{$i} + (#{$i} - 1) * var(--gap));
+        .col-xl-#{$i} { flex: 0 0 $width; max-width: $width;}
+    }
+}
+@include lg {
+    @for $i from 1 through 12 { 
+        $width : calc((100% - (11 * var(--gap))) / 12 * #{$i} + (#{$i} - 1) * var(--gap));
+        .col-lg-#{$i} { flex: 0 0 $width; max-width: $width;}
+    }
+}
+@include md {
+    @for $i from 1 through 12 { 
+        $width : calc((100% - (11 * var(--gap))) / 12 * #{$i} + (#{$i} - 1) * var(--gap));
+        .col-md-#{$i} { flex: 0 0 $width; max-width: $width;}
+    }
+}
+@include sm {
+    @for $i from 1 through 12 { 
+        $width : calc((100% - (11 * var(--gap))) / 12 * #{$i} + (#{$i} - 1) * var(--gap));
+        .col-sm-#{$i} { flex: 0 0 $width; max-width: $width;}
+    }
+}
+@include xs {
+    @for $i from 1 through 12 { 
+        $width : calc((100% - (11 * var(--gap))) / 12 * #{$i} + (#{$i} - 1) * var(--gap));
+        .col-xs-#{$i} { flex: 0 0 $width; max-width: $width;}
+    }
+}
+
+@for $i from 1 through 12 { 
+    .flex-#{$i} { flex: #{$i} #{$i} 0; }
+}
+@include xl {
+    @for $i from 1 through 12 { 
+        .flex-xl-#{$i} { flex: #{$i} #{$i} 0; }
+    }
+}
+@include lg {
+    @for $i from 1 through 12 { 
+        .flex-lg-#{$i} { flex: #{$i} #{$i} 0; }
+    }
+}
+@include md {
+    @for $i from 1 through 12 { 
+        .flex-md-#{$i} { flex: #{$i} #{$i} 0; }
+    }
+}
+@include sm {
+    @for $i from 1 through 12 { 
+        .flex-sm-#{$i} { flex: #{$i} #{$i} 0; }
+    }
+}
+@include xs {
+    @for $i from 1 through 12 { 
+        .flex-xs-#{$i} { flex: #{$i} #{$i} 0; }
+    }
+}
+
+@each $name, $value in $spacings { .g-#{$name} { --gap: #{$value}; } }
+@include xl { @each $name, $value in $spacings { .g-xl-#{$name} { --gap: #{$value}; } } }
+@include lg { @each $name, $value in $spacings { .g-lg-#{$name} { --gap: #{$value}; } } }
+@include md { @each $name, $value in $spacings { .g-md-#{$name} { --gap: #{$value}; } } }
+@include sm { @each $name, $value in $spacings { .g-sm-#{$name} { --gap: #{$value}; } } }
+@include xs { @each $name, $value in $spacings { .g-xs-#{$name} { --gap: #{$value}; } } }
+
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.justify-evenly { justify-content: space-evenly; }
+
+.content-start { align-content: flex-start; }
+.content-end { align-content: flex-end; }
+.content-center { align-content: center; }
+.content-between { align-content: space-between; }
+.content-around { align-content: space-around; }
+.content-evenly { align-content: space-evenly; }
+.content-stretch { align-content: stretch; }
+
+.item-start { align-items: flex-start; }
+.item-end { align-items: flex-end; }
+.item-center { align-items: center; }
+.item-stretch { align-items: stretch; }
+.item-baseline { align-items: baseline; }
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+@for $i from 1 through 12 { .grid-col-#{$i} { grid-column: span #{$i};}}
+@include xl { @for $i from 1 through 12 {  .grid-col-xl-#{$i} { grid-column: span #{$i};}}}
+@include lg { @for $i from 1 through 12 {  .grid-col-lg-#{$i} { grid-column: span #{$i};}}}
+@include md { @for $i from 1 through 12 {  .grid-col-md-#{$i} { grid-column: span #{$i};}}}
+@include sm { @for $i from 1 through 12 {  .grid-col-sm-#{$i} { grid-column: span #{$i};}}}
+@include xs { @for $i from 1 through 12 {  .grid-col-xs-#{$i} { grid-column: span #{$i};}}}

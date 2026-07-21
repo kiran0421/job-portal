@@ -1,0 +1,115 @@
+@use '../variables.scss' as *;
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(240, 242, 247, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: modal-fade 0.2s ease;
+}
+
+.modal-box {
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  animation: modal-slide-up 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes modal-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes modal-slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+// Side panel
+.side-panel-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.side-panel-end {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  max-width: 95vw;
+  background: $white;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  animation: slide-in-end 0.25s ease;
+  overflow: hidden;
+}
+
+@keyframes slide-in-end {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+.side-panel-start {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  max-width: 95vw;
+  background: $white;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  animation: slide-in-start 0.25s ease;
+  overflow: hidden;
+}
+
+@keyframes slide-in-start {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+
+.side-panel-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: $white;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  animation: slide-in-top 0.25s ease;
+  overflow: hidden;
+}
+
+@keyframes slide-in-top {
+  from { transform: translateY(-100%); }
+  to   { transform: translateX(0); }
+}
+
+.side-panel-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background: $white;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  animation: slide-in-bottom 0.25s ease;
+  overflow: hidden;
+}
+
+@keyframes slide-in-bottom {
+  from { transform: translateY(100%); }
+  to   { transform: translateX(0); }
+}
