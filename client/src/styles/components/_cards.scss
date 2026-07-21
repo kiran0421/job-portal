@@ -1,0 +1,77 @@
+@use '../variables' as *;
+@use '../breakpoints' as *;
+
+@mixin card($border-color, $background) {
+  background-color: $background;
+  color: $color-text;
+  border: 1px solid $border-color;
+  border-radius: $radius-md;
+  transition: all 0.25s ease;
+}
+
+.card { @include card($border, $white); }
+.card-primary { @include card($primary-border, $primary-lighter);}
+.card-secondary { @include card($secondary-border, $secondary-lighter);}
+.card-success { @include card($success-border, $success-lighter);}
+.card-danger { @include card($danger-border, $danger-lighter);}
+.card-warning { @include card($warning-border, $warning-lighter);}
+.card-info { @include card($info-border, $info-lighter);}
+
+@mixin card-hover($shadow-color, $hover-border) {
+    &:hover {
+    border-color: $hover-border;
+    box-shadow: 0 4px 12px $shadow-color;
+    transform: translateY(-2px);
+  }
+}
+
+.card-hover { @include card-hover($border-hover, $shadow); }
+.card-primary-hover { @include card-hover($primary-border-dark, $shadow); }
+.card-secondary-hover{ @include card-hover($secondary-border-dark, $shadow,); }
+.card-success-hover { @include card-hover($success-border-dark, $shadow); }
+.card-danger-hover { @include card-hover($danger-border-dark, $shadow); }
+.card-warning-hover { @include card-hover($warning-border-dark, $shadow); }
+.card-info-hover { @include card-hover($info-border-dark, $shadow); }
+
+@mixin divider($border-color, $hover-border){
+    height: 1px; background-color: $border-color;
+    &:hover {
+        height: 1px; background-color: $hover-border;
+    }
+}
+
+.divider { @include divider($border, $border-hover) }
+.divider-primary { @include divider($primary-border, $primary-border-dark) }
+.divider-secondary { @include divider($secondary-border, $secondary-border-dark) }
+.divider-success { @include divider($success-border, $success-border-dark) }
+.divider-danger { @include divider($danger-border, $danger-border-dark) }
+.divider-warning { @include divider($warning-border, $warning-border-dark) }
+.divider-info { @include divider($info-border, $info-border-dark) }
+
+.card-border-top-primary { border-top:4px solid $primary !important; }
+.card-border-top-secondary { border-top:4px solid $secondary !important; }
+.card-border-top-success { border-top:4px solid $success !important; }
+.card-border-top-danger { border-top:4px solid $danger !important; }
+.card-border-top-warning { border-top:4px solid $warning !important; }
+.card-border-top-info { border-top:4px solid $info !important; }
+
+.card-border-bottom-primary { border-bottom:4px solid $primary !important; }
+.card-border-bottom-secondary { border-bottom:4px solid $secondary !important; }
+.card-border-bottom-success { border-bottom:4px solid $success !important; }
+.card-border-bottom-danger { border-bottom:4px solid $danger !important; }
+.card-border-bottom-warning { border-bottom:4px solid $warning !important; }
+.card-border-bottom-info { border-bottom:4px solid $info !important; }
+
+.card-border-left-primary { border-left:4px solid $primary !important; }
+.card-border-left-secondary { border-left:4px solid $secondary !important; }
+.card-border-left-success { border-left:4px solid $success !important; }
+.card-border-left-danger { border-left:4px solid $danger !important; }
+.card-border-left-warning { border-left:4px solid $warning !important; }
+.card-border-left-info { border-left:4px solid $info !important; }
+
+.card-border-right-primary { border-right:4px solid $primary !important; }
+.card-border-right-secondary { border-right:4px solid $secondary !important; }
+.card-border-right-success { border-right:4px solid $success !important; }
+.card-border-right-danger { border-right:4px solid $danger !important; }
+.card-border-right-warning { border-right:4px solid $warning !important; }
+.card-border-right-info { border-right:4px solid $info !important; }
