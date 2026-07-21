@@ -15,6 +15,8 @@ import fs from "node:fs";
 
 const DEMO_FOLDER = path.join(process.cwd(), 'file_storage', 'fs_demo');
 const sync_file_path = path.join(DEMO_FOLDER, 'sync_file.txt');
+const callback_file_path = path.join(DEMO_FOLDER, 'callback_file.txt');
+const promise_file_path = path.join(DEMO_FOLDER, 'promise_file.txt');
 
 type Filersult = {
     type: string,
@@ -60,3 +62,48 @@ async function main(): Promise <void>{
 }
 
 main();
+
+
+
+// callback (error , result)
+
+function runCallBackExample(): Promise <Filersult>{
+    return new Promise((resolve, reject)=>{
+        fs.writeFile(callback_file_path, 'Created using callback file write operation', 'utf-8', 
+        (err)=>{
+            if(err){
+            reject(err)
+            return
+            }
+        })
+        fs.appendFile( 
+            callback_file_path,
+            "appended using call back file path",
+            "utf-8",
+            (appendFileError) => {
+                if(appendFileError){
+                    reject(appendFileError)
+                    return
+                }
+            })
+        fs.readFile(callback_file_path, 'utf-8', (readFileError, content)=>{
+            if(readFileError){
+                reject (readFileError)
+                return
+            }
+            fs.stat(callback_file_path, (statError, stats)=>{
+                if(statError){
+                    reject(statError)
+                    return
+                    }
+                    resolve({
+                        type:"callback",
+                        content,
+                        fileName: path.basename(callback_file_path),
+                        fileSize: stats.size
+                    })
+            })
+        })
+    })
+}
+runCallBackExample();

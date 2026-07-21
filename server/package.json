@@ -33,6 +33,8 @@
     "06": "tsx src/06-async-await-module.ts",
     "07": "tsx src/07-callback-modules.ts",
     "08": "tsx src/08-fs-module.ts",
+    "09": "tsx src/09-buffers-module.ts",
+    "10": "tsx src/10-url-module.ts",
     "start": "node --watch index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
