@@ -30,6 +30,9 @@
     "03": "tsx src/03-os-module.ts",
     "04": "tsx src/04-path-module.ts",
     "05": "tsx src/05-timeout-module.ts",
+    "06": "tsx src/06-async-await-module.ts",
+    "07": "tsx src/07-callback-modules.ts",
+    "08": "tsx src/08-fs-module.ts",
     "start": "node --watch index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

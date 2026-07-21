@@ -1,0 +1,2 @@
+Hello from sync file write operation
+Append to file append operation
